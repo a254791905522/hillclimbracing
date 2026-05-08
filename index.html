@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hill Climb Racing - Drive, Climb, Conquer</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #F0F4F8;
+      color: #333;
+      line-height: 1.6;
+    }
+    .hero {
+      background: linear-gradient(135deg, #1A1A2E 0%, #7A2E1B 50%, #FF6B35 100%);
+      color: #fff;
+      text-align: center;
+      padding: 60px 20px 48px;
+    }
+    .hero h1 {
+      font-size: 42px;
+      font-weight: 800;
+      margin-bottom: 8px;
+      letter-spacing: -0.5px;
+    }
+    .hero h1 span { color: #FFD166; }
+    .hero .subtitle {
+      font-size: 20px;
+      color: #ffd9c9;
+      font-weight: 400;
+      margin-bottom: 24px;
+    }
+    .hero .badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.14);
+      padding: 6px 18px;
+      border-radius: 20px;
+      font-size: 14px;
+      color: #fff1ea;
+    }
+
+    .screenshots-section {
+      padding: 48px 20px;
+      text-align: center;
+    }
+    .screenshots-section h2 {
+      font-size: 28px;
+      color: #1A1A2E;
+      margin-bottom: 32px;
+    }
+    .screenshots-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 14px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .screenshot-card {
+      background: #fff;
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      transition: transform 0.2s;
+    }
+    .screenshot-card:hover { transform: translateY(-4px); }
+    .screenshot-card img {
+      width: 100%;
+      display: block;
+      aspect-ratio: 9 / 19.5;
+      object-fit: cover;
+      background: #dbe4ee;
+    }
+    .screenshot-card .label {
+      padding: 8px 12px;
+      font-size: 13px;
+      color: #666;
+      text-align: center;
+      font-weight: 500;
+    }
+
+    .features-section {
+      padding: 48px 20px;
+      background: #fff;
+    }
+    .features-section .inner { max-width: 860px; margin: 0 auto; }
+    .features-section h2 {
+      font-size: 28px;
+      color: #1A1A2E;
+      margin-bottom: 24px;
+      text-align: center;
+    }
+    .features-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    @media (max-width: 600px) { .features-grid { grid-template-columns: 1fr; } }
+    .feature-item {
+      background: #fff4ef;
+      border: 1px solid #ffd9c9;
+      border-radius: 12px;
+      padding: 20px;
+    }
+    .feature-item h3 { color: #C2451C; font-size: 16px; margin-bottom: 6px; }
+    .feature-item p { color: #555; font-size: 14px; }
+
+    .description-section { padding: 48px 20px; }
+    .description-section .inner {
+      max-width: 860px;
+      margin: 0 auto;
+      background: #fff;
+      border-radius: 16px;
+      padding: 40px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    }
+    .description-section h2 { font-size: 24px; color: #1A1A2E; margin-bottom: 16px; }
+    .description-section p { margin-bottom: 14px; color: #444; }
+
+    .info-box {
+      background: #1A1A2E;
+      color: #fff;
+      padding: 36px 20px;
+      text-align: center;
+    }
+    .info-box h3 { font-size: 20px; margin-bottom: 16px; color: #FFD166; }
+    .info-box .info-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .info-box .info-item { text-align: center; }
+    .info-box .info-item strong { display: block; color: #FFD166; font-size: 13px; margin-bottom: 4px; }
+    .info-box .info-item span { font-size: 15px; }
+
+    .cta {
+      background: #F0F4F8;
+      text-align: center;
+      padding: 26px 16px 40px;
+    }
+    .btn {
+      display: inline-block;
+      text-decoration: none;
+      background: #FF6B35;
+      color: #fff;
+      font-weight: 700;
+      border-radius: 999px;
+      padding: 12px 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="hero">
+    <h1>HILL <span>CLIMB RACING</span></h1>
+    <p class="subtitle">Master steep hills, control your momentum, and conquer every climb.</p>
+    <div class="badge">Physics-Based Driving Challenge</div>
+  </div>
+
+  <div class="screenshots-section">
+    <h2>Gameplay</h2>
+    <div class="screenshots-grid">
+      <div class="screenshot-card">
+        <img src="screenshots_65/01_menu.png" alt="Main Menu" />
+        <div class="label">Main Menu</div>
+      </div>
+      <div class="screenshot-card">
+        <img src="screenshots_65/02_gameplay_drive.png" alt="Driving Gameplay" />
+        <div class="label">Driving Gameplay</div>
+      </div>
+      <div class="screenshot-card">
+        <img src="screenshots_65/03_climb_action.png" alt="Climb Action" />
+        <div class="label">Steep Climb</div>
+      </div>
+      <div class="screenshot-card">
+        <img src="screenshots_65/04_crash_or_fail.png" alt="Crash Scene" />
+        <div class="label">Crash & Retry</div>
+      </div>
+      <div class="screenshot-card">
+        <img src="screenshots_65/05_upgrade_or_garage.png" alt="Upgrade Screen" />
+        <div class="label">Vehicle Upgrade</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="features-section">
+    <div class="inner">
+      <h2>Features</h2>
+      <div class="features-grid">
+        <div class="feature-item">
+          <h3>Physics-Driven Gameplay</h3>
+          <p>Every slope, jump, and landing feels dynamic with responsive vehicle physics.</p>
+        </div>
+        <div class="feature-item">
+          <h3>Simple, Tight Controls</h3>
+          <p>Precise acceleration and braking controls make every run skill-based and rewarding.</p>
+        </div>
+        <div class="feature-item">
+          <h3>Vehicle Progression</h3>
+          <p>Collect coins and improve your car performance for tougher hill challenges.</p>
+        </div>
+        <div class="feature-item">
+          <h3>Challenging Terrain</h3>
+          <p>Face rough roads, steep climbs, and momentum traps that test your timing.</p>
+        </div>
+        <div class="feature-item">
+          <h3>Replay Value</h3>
+          <p>Beat your own distance record and refine your strategy with each attempt.</p>
+        </div>
+        <div class="feature-item">
+          <h3>Quick Sessions</h3>
+          <p>Designed for short, fun runs you can enjoy anytime, anywhere.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="description-section">
+    <div class="inner">
+      <h2>About the Game</h2>
+      <p>Hill Climb Racing is a physics-based driving experience where control is everything. Push forward to gain speed, brake to keep balance, and adapt to the terrain in real time.</p>
+      <p>Your goal is simple: drive farther, earn more coins, and improve your vehicle to take on harder climbs. The challenge comes from maintaining momentum without flipping over.</p>
+      <p>Whether you play for quick fun or long improvement sessions, each run gives you a new chance to master the hills and set a better record.</p>
+    </div>
+  </div>
+
+  <div class="info-box">
+    <h3>App Information</h3>
+    <div class="info-grid">
+      <div class="info-item">
+        <strong>Genre</strong>
+        <span>Racing / Casual</span>
+      </div>
+      <div class="info-item">
+        <strong>Compatibility</strong>
+        <span>iOS 13.0+</span>
+      </div>
+      <div class="info-item">
+        <strong>Age Rating</strong>
+        <span>4+</span>
+      </div>
+      <div class="info-item">
+        <strong>Languages</strong>
+        <span>English</span>
+      </div>
+      <div class="info-item">
+        <strong>Version</strong>
+        <span>1.0.0</span>
+      </div>
+      <div class="info-item">
+        <strong>Privacy</strong>
+        <span>No Data Collection</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="cta">
+    <a class="btn" href="#" aria-label="Download on the App Store">Download on the App Store</a>
+  </div>
+
+</body>
+</html>
